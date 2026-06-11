@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gene's Service Center | Auto Repair Albuquerque NM | Brakes, Transmission, Oil Changes</title>
+<meta name="description" content="Gene's Service Center in Albuquerque, NM. Family-owned since 1959. Expert brake repair, transmission repair, steering and suspension, oil changes, and routine maintenance. Call (505) 255-8870.">
+<meta name="keywords" content="auto brake repair Albuquerque, transmission repair Albuquerque, steering suspension repair Albuquerque NM, oil change Albuquerque, transmission leak inspection, routine automotive maintenance Albuquerque, auto repair Carlisle Blvd, Gene's Service Center">
+<meta property="og:title" content="Gene's Service Center | Albuquerque Auto Repair Since 1959">
+<meta property="og:description" content="Family-owned auto repair in Albuquerque, NM. Honest service, fair prices, no unnecessary repairs. Brakes, transmission, steering and suspension, oil changes.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.genesservicecenter.com/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Gene's Service Center",
+  "description": "Family-owned auto repair shop serving Albuquerque since 1959.",
+  "address": {"@type": "PostalAddress","streetAddress": "1401 Carlisle Blvd NE","addressLocality": "Albuquerque","addressRegion": "NM","postalCode": "87110"},
+  "telephone": "+15052558870",
+  "openingHours": ["Mo-Th 08:00-17:00"],
+  "priceRange": "$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog","name": "Auto Repair Services",
+    "itemListElement": [
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Auto Brake Repair"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Steering and Suspension Repair"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Auto Transmission Repair"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Oil Changes"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Routine Automotive Maintenance"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Transmission Leak Inspection"}}
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Tinos:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #C8181E;
+    --red-dark: #a01217;
+    --blue: #1B3F8B;
+    --yellow: #F2C12E;
+    --white: #F7F6F2;
+    --charcoal: #1A1A1A;
+    --mid: #444;
+    --light: #E9E8E3;
+    --steel: #6B6B6B;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--charcoal);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav { background: var(--charcoal); position: sticky; top: 0; z-index: 100; }
+  .stripe-top { height: 5px; background: linear-gradient(to right, var(--red) 50%, var(--blue) 50%); }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
+    display: flex; align-items: center; justify-content: space-between; height: 58px;
+  }
+  .nav-logo {
+    font-family: 'Tinos', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--red);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: -0.5px -0.5px 0 rgba(255,255,255,0.55), 0.5px -0.5px 0 rgba(255,255,255,0.55), -0.5px 0.5px 0 rgba(255,255,255,0.55), 0.5px 0.5px 0 rgba(255,255,255,0.55);
+  }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+  .nav-links a {
+    font-weight: 600; font-size: 0.85rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: #bbb; text-decoration: none; transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta { background: var(--red); color: var(--white) !important; padding: 0.4rem 1.1rem; border-radius: 2px; }
+  .nav-cta:hover { background: var(--red-dark) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+  /* HERO */
+  .hero { position: relative; padding: 5.5rem 1.5rem 4rem; overflow: hidden; background: var(--charcoal); }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('./img/hero-bg.jpg');
+    background-size: cover; background-position: center 40%;
+    opacity: 0.28; z-index: 0;
+  }
+  .hero-band { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; pointer-events: none; z-index: 1; }
+  .hero-band .b-red  { height: 10px; background: var(--red); }
+  .hero-band .b-blue { height: 6px;  background: var(--blue); }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto; position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  }
+  .est-badge {
+    font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem; display: block;
+  }
+  .hero h1 {
+    font-family: 'Tinos', serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    line-height: 1.05; color: var(--white); margin-bottom: 1.1rem;
+    text-transform: uppercase; letter-spacing: 0.02em;
+    /* text-shadow: -2px -2px 0 rgba(255,255,255,0.2), 2px -2px 0 rgba(255,255,255,0.2), -2px 2px 0 rgba(255,255,255,0.2), 2px 2px 0 rgba(255,255,255,0.2); */
+  }
+  .hero h1 span {
+    color: var(--red);
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.597), 1px -1px 0 rgba(255,255,255,0.35), -2px 2px 0 rgba(255,255,255,0.35), 2px 2px 0 rgba(255,255,255,0.35);
+  }
+  .hero-sub { color: #c8c8c8; font-size: 1rem; margin-bottom: 2rem; max-width: 400px; line-height: 1.65; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--red); color: var(--white); font-weight: 600; font-size: 0.9rem;
+    letter-spacing: 0.06em; text-transform: uppercase; padding: 0.75rem 1.75rem;
+    border: none; border-radius: 2px; cursor: pointer; text-decoration: none;
+    display: inline-block; transition: background 0.15s;
+  }
+  .btn-primary:hover { background: var(--red-dark); }
+  .btn-outline {
+    background: transparent; color: var(--white); font-weight: 600; font-size: 0.9rem;
+    letter-spacing: 0.06em; text-transform: uppercase; padding: 0.73rem 1.75rem;
+    border: 2px solid rgba(255,255,255,0.4); border-radius: 2px; cursor: pointer;
+    text-decoration: none; display: inline-block; transition: border-color 0.15s;
+  }
+  .btn-outline:hover { border-color: var(--white); }
+
+  .hero-info { display: flex; flex-direction: column; gap: 1.1rem; }
+  .info-card {
+    background: rgba(0,0,0,0.55); border-left: 3px solid var(--blue);
+    padding: 1rem 1.25rem; backdrop-filter: blur(2px);
+  }
+  .info-card strong {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--yellow); display: block; margin-bottom: 0.3rem;
+  }
+  .info-card p, .info-card a { color: var(--white); font-size: 1rem; text-decoration: none; line-height: 1.45; }
+  .info-card a:hover { color: var(--yellow); }
+
+  /* STRIPE DIVIDER */
+  .stripe-divider { display: flex; flex-direction: column; }
+  .stripe-divider .s-red  { height: 8px; background: var(--red); }
+  .stripe-divider .s-blue { height: 5px; background: var(--blue); }
+
+  /* TRUST BAR */
+  .trust-bar { background: var(--blue); padding: 0.85rem 1.5rem; }
+  .trust-bar-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; align-items: center;
+  }
+  .trust-item {
+    font-weight: 600; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.35rem 0.85rem;
+    border-radius: 2px;
+  }
+
+  /* SECTIONS */
+  section { padding: 5rem 1.5rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    font-weight: 600; font-size: 0.72rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-family: 'Alfa Slab One', serif;
+    font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+    line-height: 1.05; margin-bottom: 1rem; color: var(--charcoal);
+  }
+  .section-lead { font-size: 1rem; color: var(--steel); max-width: 600px; margin-bottom: 3rem; line-height: 1.7; }
+
+  /* SERVICES */
+  #services { background: var(--white); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  .service-card {
+    background: var(--white); padding: 2rem; border: 1px solid var(--light);
+    cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+    text-decoration: none; color: inherit; display: block;
+  }
+  .service-card:hover {
+    border-color: var(--red);
+    box-shadow: 0 4px 18px rgba(200,24,30,0.1);
+    transform: translateY(-2px);
+  }
+  .service-card:hover .service-card-cta { color: var(--red); }
+  .service-card-accent { display: flex; margin-bottom: 1.25rem; }
+  .service-card-accent .a-red  { width: 28px; height: 4px; background: var(--red); }
+  .service-card-accent .a-blue { width: 18px; height: 4px; background: var(--blue); }
+  .service-card h3 {
+    font-family: 'Alfa Slab One', serif; font-size: 1.2rem;
+    color: var(--charcoal); margin-bottom: 0.6rem; line-height: 1.2;
+  }
+  .service-card p { font-size: 0.92rem; color: var(--steel); line-height: 1.65; margin-bottom: 0.9rem; }
+  .service-card-cta {
+    font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--steel); transition: color 0.18s;
+  }
+
+  /* ABOUT */
+  #about { background: var(--charcoal); }
+  #about h2 { color: var(--white); }
+  #about .section-eyebrow { color: var(--yellow); }
+  #about .section-lead { color: #999; max-width: 100%; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: #2e2e2e; border: 1px solid #2e2e2e; margin-top: 2rem;
+  }
+  .stat-box { background: var(--charcoal); padding: 1.5rem; }
+  .stat-box .num {
+    font-family: 'Alfa Slab One', serif; font-size: 2.5rem;
+    color: var(--red); line-height: 1; display: block;
+  }
+  .stat-box .label {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #777; margin-top: 0.3rem;
+  }
+  .about-pillars { display: flex; flex-direction: column; gap: 1.5rem; }
+  .pillar { border-left: 3px solid var(--blue); padding-left: 1.25rem; }
+  .pillar h4 {
+    font-family: 'Alfa Slab One', serif; font-size: 1rem;
+    color: var(--white); margin-bottom: 0.35rem; line-height: 1.3;
+  }
+  .pillar p { font-size: 0.9rem; color: #888; line-height: 1.65; }
+
+  /* SCHEDULE */
+  #schedule { background: var(--light); }
+  .schedule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .schedule-widget-box { background: var(--white); border-top: 5px solid var(--red); padding: 2rem; }
+  .schedule-widget-box h3 {
+    font-family: 'Alfa Slab One', serif; font-size: 1.4rem;
+    color: var(--charcoal); margin-bottom: 0.4rem;
+  }
+  .schedule-widget-box > p { font-size: 0.9rem; color: var(--steel); margin-bottom: 1.5rem; }
+
+  .steercrm-placeholder {
+    border: 2px dashed #ccc; border-radius: 2px; padding: 2.5rem 1.5rem;
+    text-align: center; background: #fafaf8; margin-bottom: 1.5rem;
+  }
+  .steercrm-placeholder p { font-size: 0.88rem; color: var(--steel); line-height: 1.6; }
+  .steercrm-placeholder strong {
+    display: block; font-family: 'Alfa Slab One', serif;
+    font-size: 1.05rem; color: var(--charcoal); margin-bottom: 0.4rem;
+  }
+
+  .fallback-form { display: flex; flex-direction: column; gap: 0.9rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+  .form-group label {
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--mid);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.6rem 0.8rem; border: 1px solid #ccc; border-radius: 2px;
+    font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--charcoal);
+    background: var(--white); transition: border-color 0.15s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { outline: none; border-color: var(--red); }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-submit {
+    background: var(--red); color: var(--white); font-weight: 600; font-size: 0.88rem;
+    letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem 1.5rem;
+    border: none; border-radius: 2px; cursor: pointer; transition: background 0.15s; margin-top: 0.25rem;
+  }
+  .form-submit:hover { background: var(--red-dark); }
+
+  .schedule-alt { display: flex; flex-direction: column; gap: 1.5rem; padding-top: 1rem; }
+  .schedule-alt h3 { font-family: 'Alfa Slab One', serif; font-size: 1.4rem; color: var(--charcoal); margin-bottom: 0.2rem; }
+  .schedule-alt > p { color: var(--steel); font-size: 0.95rem; }
+  .contact-block { background: var(--white); padding: 1.25rem 1.5rem; border-left: 4px solid var(--blue); }
+  .contact-block .lbl {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--steel); margin-bottom: 0.25rem;
+  }
+  .contact-block .val {
+    font-family: 'Alfa Slab One', serif; font-size: 1.3rem;
+    color: var(--charcoal); text-decoration: none; display: block; line-height: 1.25;
+  }
+  .contact-block .val:hover { color: var(--red); }
+  .contact-block .sub { font-size: 0.83rem; color: var(--steel); margin-top: 0.2rem; }
+
+  /* REVIEWS */
+  #reviews { background: var(--white); }
+  .reviews-carousel { position: relative; margin-top: 2.5rem; }
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    transition: opacity 0.35s ease;
+  }
+  .reviews-grid.fading { opacity: 0; }
+  .review-card { border: 1px solid var(--light); padding: 1.5rem; }
+  .review-stars { color: var(--red); font-size: 1rem; margin-bottom: 0.75rem; }
+  .review-text { font-size: 0.9rem; color: var(--mid); line-height: 1.65; margin-bottom: 1rem; font-style: italic; }
+  .review-author { font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--charcoal); }
+  .review-source { font-size: 0.75rem; color: var(--steel); margin-top: 0.1rem; }
+  .reviews-controls {
+    display: flex; align-items: center; justify-content: center;
+    gap: 1rem; margin-top: 1.75rem;
+  }
+  .reviews-btn {
+    background: none; border: 1px solid var(--light); color: var(--steel);
+    width: 36px; height: 36px; border-radius: 2px; cursor: pointer; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .reviews-btn:hover { border-color: var(--red); color: var(--red); }
+  .reviews-dots { display: flex; gap: 7px; align-items: center; }
+  .reviews-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--light); border: 1px solid #ccc; cursor: pointer; padding: 0;
+    transition: background 0.2s;
+  }
+  .reviews-dot.active { background: var(--red); border-color: var(--red); }
+  @media (max-width: 768px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+  /* LOCATION */
+  #location { background: var(--charcoal); padding: 5rem 1.5rem; }
+  #location h2 { color: var(--white); }
+  #location .section-eyebrow { color: var(--yellow); }
+  .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 2.5rem; }
+  .location-details { display: flex; flex-direction: column; gap: 1.5rem; }
+  .location-row { border-left: 3px solid var(--red); padding-left: 1.25rem; }
+  .location-row .lbl { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.2rem; }
+  .location-row .val { color: var(--white); font-size: 1rem; line-height: 1.5; }
+  .location-row a { color: var(--white); text-decoration: none; }
+  .location-row a:hover { color: var(--yellow); }
+  .map-embed { width: 100%; height: 300px; border: none; display: block; }
+
+  /* FOOTER */
+  footer { background: #111; padding: 3rem 1.5rem 2rem; }
+  .footer-stripe { display: flex; }
+  .footer-stripe .fs-red  { flex: 1; height: 4px; background: var(--red); }
+  .footer-stripe .fs-blue { flex: 1; height: 4px; background: var(--blue); }
+  .footer-inner { max-width: 1100px; margin: 2rem auto 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  .footer-brand .logo { font-family: 'Tinos', serif; font-weight: 700; font-size: 1.5rem; color: var(--red); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.02em;
+    text-shadow: -0.5px -0.5px 0 rgba(255,255,255,0.55), 0.5px -0.5px 0 rgba(255,255,255,0.55), -0.5px 0.5px 0 rgba(255,255,255,0.55), 0.5px 0.5px 0 rgba(255,255,255,0.55);
+ }
+  .footer-brand p { font-size: 0.88rem; color: #777; line-height: 1.6; max-width: 280px; }
+  .footer-col h4 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .footer-col ul li a { color: #777; text-decoration: none; font-size: 0.88rem; transition: color 0.15s; }
+  .footer-col ul li a:hover { color: var(--white); }
+  .footer-col p { color: #777; font-size: 0.88rem; line-height: 1.6; }
+  .footer-bottom {
+    max-width: 1100px; margin: 0 auto; border-top: 1px solid #222; padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: 0.8rem; color: #444; }
+  .footer-bottom a { color: #444; text-decoration: none; }
+  .footer-bottom a:hover { color: #777; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav .nav-links { display: none; }
+    nav .nav-links.open {
+      display: flex; flex-direction: column; position: absolute;
+      top: 63px; left: 0; right: 0; background: var(--charcoal);
+      border-bottom: 3px solid var(--red); padding: 1rem 1.5rem; gap: 1rem;
+    }
+    .hamburger { display: flex; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-info { display: none; }
+    .hero { padding: 3.5rem 1.5rem 3rem; }
+    .about-grid, .schedule-grid, .location-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .trust-bar-inner { justify-content: flex-start; }
+    section { padding: 3.5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stripe-top" aria-hidden="true"></div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Gene's Service Center</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#schedule" class="nav-cta">Schedule</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-band" aria-hidden="true">
+    <div class="b-red"></div>
+    <div class="b-blue"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="est-badge">Est. 1959 &nbsp;&middot;&nbsp; Albuquerque, NM</span>
+      <h1>Honest Auto Repair.<br><span>Done Right.</span></h1>
+      <p class="hero-sub">Family-owned and operated for over 65 years. We fix what your car actually needs, explain everything we find, and only do work you authorize.</p>
+      <div class="hero-actions">
+        <a href="#schedule" class="btn-primary">Schedule Service</a>
+        <a href="tel:+15052558870" class="btn-outline">Call (505) 255-8870</a>
+      </div>
+    </div>
+    <div class="hero-info" aria-label="Contact and hours">
+      <div class="info-card">
+        <strong>Phone</strong>
+        <a href="tel:+15052558870">(505) 255-8870</a>
+      </div>
+      <div class="info-card">
+        <strong>Address</strong>
+        <p>1401 Carlisle Blvd NE<br>Albuquerque, NM 87110</p>
+      </div>
+      <div class="info-card">
+        <strong>Hours</strong>
+        <p>Mon &ndash; Thu: 8:00 AM &ndash; 5:00 PM<br>Fri &ndash; Sun: Closed</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stripe-divider" aria-hidden="true">
+  <div class="s-red"></div>
+  <div class="s-blue"></div>
+</div>
+
+<div class="trust-bar" role="complementary" aria-label="Trust indicators">
+  <div class="trust-bar-inner">
+    <span class="trust-item">No Pressure, No Upsells</span>
+    <span class="trust-item">Domestic &amp; Foreign Vehicles</span>
+    <span class="trust-item">Computer Diagnostics</span>
+    <span class="trust-item">You Authorize Every Repair</span>
+    <span class="trust-item">65+ Years in Business</span>
+  </div>
+</div>
+
+<section id="services" aria-labelledby="services-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">What We Do</p>
+    <h2 id="services-heading">Our Services</h2>
+    <p class="section-lead">We have the training and equipment to work on whatever make or model you bring in. Once we've evaluated your vehicle, we only perform the repairs and maintenance you authorize.</p>
+    <div class="services-grid" role="list">
+
+      <a class="service-card" role="listitem" href="#schedule" data-service="Brake Repair">
+        <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
+        <h3>Brake Repair</h3>
+        <p>From pad replacements to full rotor resurfacing, we keep your stopping power where it needs to be. Calipers, lines, and hardware inspected with every job.</p>
+        <span class="service-card-cta">Request this service &rarr;</span>
+      </a>
+
+      <a class="service-card" role="listitem" href="#schedule" data-service="Steering &amp; Suspension">
+        <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
+        <h3>Steering &amp; Suspension</h3>
+        <p>Pulling to one side, clunking over bumps, or uneven tire wear are signs your suspension needs attention. We diagnose and repair shocks, struts, tie rods, and alignment issues.</p>
+        <span class="service-card-cta">Request this service &rarr;</span>
+      </a>
+
+      <a class="service-card" role="listitem" href="#schedule" data-service="Transmission Repair">
+        <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
+        <h3>Transmission Repair</h3>
+        <p>Automatic or manual, we rebuild and repair transmissions for domestic and foreign vehicles. Slipping gears, delayed engagement, rough shifting &mdash; we find the root cause first.</p>
+        <span class="service-card-cta">Request this service &rarr;</span>
+      </a>
+
+      <a class="service-card" role="listitem" href="#schedule" data-service="Oil Change">
+        <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
+        <h3>Oil Changes</h3>
+        <p>Quick, thorough oil and filter changes using the grade specified for your vehicle. We check fluid levels and flag anything that needs attention while we're in there.</p>
+        <span class="service-card-cta">Request this service &rarr;</span>
+      </a>
+
+      <a class="service-card" role="listitem" href="#schedule" data-service="Routine Maintenance">
+        <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
+        <h3>Routine Maintenance</h3>
+        <p>Belts, hoses, coolant, filters &mdash; we follow your manufacturer's schedule so small issues don't become expensive ones. A well-maintained car costs less to own.</p>
+        <span class="service-card-cta">Request this service &rarr;</span>
+      </a>
+
+      <a class="service-card" role="listitem" href="#schedule" data-service="Transmission Leak Inspection">
+        <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
+        <h3>Transmission Leak Inspection</h3>
+        <p>Red fluid on your driveway means it's time to act. We locate the source &mdash; seals, gaskets, pan, cooler lines &mdash; and give you a straight answer on what the fix involves.</p>
+        <span class="service-card-cta">Request this service &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="stripe-divider" aria-hidden="true">
+  <div class="s-red"></div>
+  <div class="s-blue"></div>
+</div>
+
+<section id="about" aria-labelledby="about-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">Our Story</p>
+    <h2 id="about-heading">Serving Albuquerque Since 1959</h2>
+    <p class="section-lead">Gene's Service Center is a family-owned and operated shop serving drivers throughout Albuquerque. Since 1959, we've been repairing and servicing domestic and foreign vehicles the right way the first time. We use computer diagnostics to determine the precise problem, and once we've evaluated your vehicle, we only perform the repairs and maintenance you authorize. We take the time to explain the mechanics of every repair so you understand exactly what was done and why. You are our priority.</p>
+    <div class="about-grid">
+      <div>
+        <div class="about-stats">
+          <div class="stat-box"><span class="num">65+</span><span class="label">Years Serving ABQ</span></div>
+          <div class="stat-box"><span class="num">100%</span><span class="label">Family Owned</span></div>
+          <div class="stat-box"><span class="num">5&#9733;</span><span class="label">Avg. Customer Rating</span></div>
+          <div class="stat-box"><span class="num">Dom + For</span><span class="label">All Makes &amp; Models</span></div>
+        </div>
+      </div>
+      <div class="about-pillars">
+        <div class="pillar">
+          <h4>You Authorize Every Repair</h4>
+          <p>We run computer diagnostics, explain what we find in plain language, and only do the work you approve. No pressure, no invented line items.</p>
+        </div>
+        <div class="pillar">
+          <h4>Any Make or Model</h4>
+          <p>Domestic or foreign &mdash; Ford, Toyota, Honda, Chevrolet, Nissan, Subaru, Mazda, and more. Today's cars are complex; we have the training and equipment to handle them.</p>
+        </div>
+        <div class="pillar">
+          <h4>We Explain What We Did</h4>
+          <p>After every service, we walk you through what was found and what was done. We want you to feel confident in our work and understand your vehicle.</p>
+        </div>
+        <div class="pillar">
+          <h4>Fast Turnaround</h4>
+          <p>Most repairs are completed same day. Our location on Carlisle makes it easy to step out to nearby businesses while you wait.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe-divider" aria-hidden="true">
+  <div class="s-red"></div>
+  <div class="s-blue"></div>
+</div>
+
+<section id="schedule" aria-labelledby="schedule-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">Get In Touch</p>
+    <h2 id="schedule-heading">Schedule Your Service</h2>
+    <p class="section-lead">Request an appointment online or call us directly. We'll confirm your time and get you taken care of.</p>
+    <div class="schedule-grid">
+
+      <div class="schedule-widget-box">
+        <h3>Request an Appointment</h3>
+        <p>Use the scheduling tool below or fill out the form and we'll reach out to confirm.</p>
+
+        <!--
+          =====================================================
+          STEERCRM ONLINE SCHEDULING WIDGET
+          =====================================================
+          To activate:
+          1. Log in to SteerCRM at app.steercrm.com
+          2. Go to Settings > Online Scheduling > Widget
+          3. Copy the iframe embed code provided
+          4. Delete the <div class="steercrm-placeholder"> block
+             and paste the SteerCRM iframe in its place.
+
+          Example:
+            <iframe
+              src="https://app.steercrm.com/scheduling/[SHOP_ID]"
+              width="100%" height="520" frameborder="0"
+              title="Schedule an appointment at Gene's Service Center">
+            </iframe>
+          =====================================================
+        -->
+        <div class="steercrm-placeholder">
+          <strong>Online Scheduling Coming Soon</strong>
+          <p>In the meantime, call us at (505) 255-8870 or use the contact form below.</p>
+        </div>
+
+        <form class="fallback-form" id="appointmentForm" action="#" method="post" aria-label="Appointment request form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="John" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Smith" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(505) 000-0000" required autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@email.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="vehicle">Vehicle (Year / Make / Model)</label>
+            <input type="text" id="vehicle" name="vehicle" placeholder="2018 Honda Accord">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option>Brake Repair</option>
+              <option>Steering &amp; Suspension</option>
+              <option>Transmission Repair</option>
+              <option>Transmission Leak Inspection</option>
+              <option>Oil Change</option>
+              <option>Routine Maintenance</option>
+              <option>Not Sure / Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Additional Notes</label>
+            <textarea id="message" name="message" placeholder="Describe what you're experiencing..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Request</button>
+        </form>
+      </div>
+
+      <div class="schedule-alt">
+        <div>
+          <h3>Prefer to Call?</h3>
+          <p>Available Monday through Thursday. Give us a call and we'll get you on the schedule right away.</p>
+        </div>
+        <div class="contact-block">
+          <p class="lbl">Phone</p>
+          <a href="tel:+15052558870" class="val">(505) 255-8870</a>
+        </div>
+        <div class="contact-block">
+          <p class="lbl">Address</p>
+          <a href="https://maps.google.com/?q=1401+Carlisle+Blvd+NE+Albuquerque+NM+87110" target="_blank" rel="noopener" class="val" style="font-size:1.05rem;">1401 Carlisle Blvd NE<br>Albuquerque, NM 87110</a>
+          <p class="sub">Across from Smith's on Carlisle</p>
+        </div>
+        <div class="contact-block">
+          <p class="lbl">Hours</p>
+          <span class="val" style="font-size:1rem;">Mon &ndash; Thu: 8:00 AM &ndash; 5:00 PM</span>
+          <p class="sub">Closed Friday, Saturday &amp; Sunday</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe-divider" aria-hidden="true">
+  <div class="s-red"></div>
+  <div class="s-blue"></div>
+</div>
+
+<section id="reviews" aria-labelledby="reviews-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">What Customers Say</p>
+    <h2 id="reviews-heading">Trusted for Decades</h2>
+    <div class="reviews-carousel">
+      <div class="reviews-grid" id="reviewsGrid" role="list"></div>
+      <div class="reviews-controls" aria-label="Review navigation">
+        <button class="reviews-btn" id="reviewsPrev" aria-label="Previous reviews">&#8592;</button>
+        <div class="reviews-dots" id="reviewsDots"></div>
+        <button class="reviews-btn" id="reviewsNext" aria-label="Next reviews">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe-divider" aria-hidden="true">
+  <div class="s-red"></div>
+  <div class="s-blue"></div>
+</div>
+
+<section id="location" aria-labelledby="location-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow">Find Us</p>
+    <h2 id="location-heading">We're on Carlisle Blvd</h2>
+    <div class="location-grid">
+      <div class="location-details">
+        <div class="location-row">
+          <p class="lbl">Address</p>
+          <p class="val">1401 Carlisle Blvd NE<br>Albuquerque, NM 87110</p>
+        </div>
+        <div class="location-row">
+          <p class="lbl">Phone</p>
+          <p class="val"><a href="tel:+15052558870">(505) 255-8870</a></p>
+        </div>
+        <div class="location-row">
+          <p class="lbl">Hours</p>
+          <p class="val">Monday &ndash; Thursday: 8:00 AM &ndash; 5:00 PM<br>Friday &ndash; Sunday: Closed</p>
+        </div>
+        <div class="location-row">
+          <p class="lbl">Getting Here</p>
+          <p class="val" style="color:#999; font-size:0.9rem;">Located across from Smith's supermarket on Carlisle Blvd NE. Plenty within walking distance while your vehicle is being serviced.</p>
+        </div>
+        <a href="https://maps.google.com/?q=1401+Carlisle+Blvd+NE+Albuquerque+NM+87110" target="_blank" rel="noopener" class="btn-primary" style="align-self:flex-start; margin-top:0.5rem;">Get Directions</a>
+      </div>
+      <div>
+        <iframe
+          class="map-embed"
+          title="Gene's Service Center location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.3!2d-106.5794!3d35.0903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872264b0d21f5e8b%3A0x0!2sGene's+Service+Center%2C+1401+Carlisle+Blvd+NE%2C+Albuquerque%2C+NM+87110!5e0!3m2!1sen!2sus!4v1234567890"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="footer-stripe" aria-hidden="true">
+    <div class="fs-red"></div>
+    <div class="fs-blue"></div>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="logo">Gene's Service Center</p>
+      <p>Family-owned auto repair in Albuquerque, NM since 1959. Honest work, fair prices, and a team you can trust with any make or model.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Brake Repair</a></li>
+        <li><a href="#services">Steering &amp; Suspension</a></li>
+        <li><a href="#services">Transmission Repair</a></li>
+        <li><a href="#services">Transmission Leak Inspection</a></li>
+        <li><a href="#services">Oil Changes</a></li>
+        <li><a href="#services">Routine Maintenance</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>1401 Carlisle Blvd NE<br>Albuquerque, NM 87110</p>
+      <br>
+      <p><a href="tel:+15052558870" style="color:#777;">(505) 255-8870</a></p>
+      <br>
+      <p>Mon &ndash; Thu: 8 AM &ndash; 5 PM<br>Fri &ndash; Sun: Closed</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Gene's Service Center &nbsp;&middot;&nbsp; All rights reserved &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a></p>
+    <p>Auto repair serving Albuquerque, NM &nbsp;&middot;&nbsp; <a href="https://maps.google.com/?q=1401+Carlisle+Blvd+NE+Albuquerque+NM" target="_blank" rel="noopener">1401 Carlisle Blvd NE, Albuquerque NM 87110</a></p>
+  </div>
+</footer>
+
+<script>
+  // Hamburger nav
+  const ham = document.getElementById('hamburger');
+  const links = document.getElementById('navLinks');
+  ham.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    ham.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('#navLinks a').forEach(a => {
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      ham.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // Service cards -> scroll to form + pre-populate dropdown
+  document.querySelectorAll('.service-card[data-service]').forEach(card => {
+    card.addEventListener('click', function(e) {
+      e.preventDefault();
+      const serviceValue = this.dataset.service;
+      const select = document.getElementById('service');
+      const scheduleSection = document.getElementById('schedule');
+
+      // Match option text, accounting for HTML entities
+      Array.from(select.options).forEach(opt => {
+        if (opt.text.trim() === serviceValue || opt.value === serviceValue) {
+          select.value = opt.value;
+        }
+      });
+
+      scheduleSection.scrollIntoView({ behavior: 'smooth' });
+
+      // Brief highlight on the dropdown after scroll lands
+      setTimeout(() => {
+        select.style.transition = 'border-color 0.2s';
+        select.style.borderColor = 'var(--red)';
+        select.focus();
+        setTimeout(() => { select.style.borderColor = ''; }, 1800);
+      }, 600);
+    });
+  });
+
+  // Reviews carousel
+  const reviews = [
+    { text: "Only once in my life have I been given a quote for auto service and found the final price was lower. Gene's really stands out as a mom-and-pop place where you can trust them to tell you what does and doesn't need to be done.", author: "Verified Customer", source: "via Yelp" },
+    { text: "Justin takes the time and effort to address your issues, then explains in detail what happened and what steps he took. During my time in Albuquerque, Justin was the only repairman I fully trusted.", author: "Verified Customer", source: "via Birdeye" },
+    { text: "I called Thursday morning leaving for vacation the next day. Justin said no problem. Needed a full tune-up and AC check and had my car back the next morning running great. Call these guys first.", author: "Verified Customer", source: "via Birdeye" },
+    { text: "Took my car in for a transmission issue I had been putting off for months. Justin diagnosed it fast, explained exactly what was going on, and had it fixed same day. Fair price and no surprises on the bill.", author: "Verified Customer", source: "via Google" },
+    { text: "I have been bringing my cars here for years. Justin is honest, thorough, and never tries to upsell you on things you do not need. Hard to find a shop like this anymore.", author: "Longtime Customer", source: "via Google" },
+    { text: "Brought in my Subaru for a brake job. They finished faster than quoted and called me before doing anything extra. Exactly the kind of shop you want to find in your neighborhood.", author: "Verified Customer", source: "via Yelp" }
+  ];
+
+  const PER_PAGE = 3;
+  let currentPage = 0;
+  const totalPages = Math.ceil(reviews.length / PER_PAGE);
+  const grid = document.getElementById('reviewsGrid');
+  const dotsContainer = document.getElementById('reviewsDots');
+
+  for (let i = 0; i < totalPages; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'reviews-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to page ' + (i + 1));
+    dot.addEventListener('click', () => goToPage(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function renderPage(page) {
+    const slice = reviews.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
+    grid.innerHTML = slice.map(r =>
+      '<article class="review-card" role="listitem" itemscope itemtype="https://schema.org/Review">' +
+      '<div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>' +
+      '<p class="review-text" itemprop="reviewBody">' + r.text + '</p>' +
+      '<p class="review-author" itemprop="author">' + r.author + '</p>' +
+      '<p class="review-source">' + r.source + '</p>' +
+      '</article>'
+    ).join('');
+    dotsContainer.querySelectorAll('.reviews-dot').forEach((d, i) => d.classList.toggle('active', i === page));
+  }
+
+  function goToPage(page) {
+    if (page === currentPage) return;
+    grid.classList.add('fading');
+    setTimeout(() => { currentPage = page; renderPage(currentPage); grid.classList.remove('fading'); }, 350);
+  }
+
+  document.getElementById('reviewsPrev').addEventListener('click', () => goToPage((currentPage - 1 + totalPages) % totalPages));
+  document.getElementById('reviewsNext').addEventListener('click', () => goToPage((currentPage + 1) % totalPages));
+
+  let autoTimer = setInterval(() => goToPage((currentPage + 1) % totalPages), 7000);
+  grid.addEventListener('mouseenter', () => clearInterval(autoTimer));
+  grid.addEventListener('mouseleave', () => { autoTimer = setInterval(() => goToPage((currentPage + 1) % totalPages), 7000); });
+
+  renderPage(0);
+</script>
+
+</body>
+</html>
