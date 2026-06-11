@@ -9,6 +9,7 @@
 <meta property="og:title" content="Gene's Service Center | Albuquerque Auto Repair Since 1959">
 <meta property="og:description" content="Family-owned auto repair in Albuquerque, NM. Honest service, fair prices, no unnecessary repairs. Brakes, transmission, steering and suspension, oil changes.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="./img/hero-bg.jpg">
 <link rel="canonical" href="https://www.genesservicecenter.com/">
 
 <script type="application/ld+json">
@@ -118,7 +119,6 @@
     font-size: clamp(2.5rem, 5.5vw, 4rem);
     line-height: 1.05; color: var(--white); margin-bottom: 1.1rem;
     text-transform: uppercase; letter-spacing: 0.02em;
-    /* text-shadow: -2px -2px 0 rgba(255,255,255,0.2), 2px -2px 0 rgba(255,255,255,0.2), -2px 2px 0 rgba(255,255,255,0.2), 2px 2px 0 rgba(255,255,255,0.2); */
   }
   .hero h1 span {
     color: var(--red);
@@ -241,6 +241,7 @@
   .pillar { border-left: 3px solid var(--blue); padding-left: 1.25rem; }
   .pillar h4 {
     font-family: 'Alfa Slab One', serif; font-size: 1rem;
+    font-weight:200;
     color: var(--white); margin-bottom: 0.35rem; line-height: 1.3;
   }
   .pillar p { font-size: 0.9rem; color: #888; line-height: 1.65; }
@@ -458,7 +459,7 @@
     <span class="trust-item">No Pressure, No Upsells</span>
     <span class="trust-item">Domestic &amp; Foreign Vehicles</span>
     <span class="trust-item">Computer Diagnostics</span>
-    <span class="trust-item">You Authorize Every Repair</span>
+    <!-- <span class="trust-item">You Authorize Every Repair</span> -->
     <span class="trust-item">65+ Years in Business</span>
   </div>
 </div>
@@ -477,7 +478,7 @@
         <span class="service-card-cta">Request this service &rarr;</span>
       </a>
 
-      <a class="service-card" role="listitem" href="#schedule" data-service="Steering &amp; Suspension">
+      <a class="service-card" role="listitem" href="#schedule" data-service="Steering &amp; Suspension" data-service-plain="Steering & Suspension">
         <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
         <h3>Steering &amp; Suspension</h3>
         <p>Pulling to one side, clunking over bumps, or uneven tire wear are signs your suspension needs attention. We diagnose and repair shocks, struts, tie rods, and alignment issues.</p>
@@ -532,7 +533,7 @@
           <div class="stat-box"><span class="num">65+</span><span class="label">Years Serving ABQ</span></div>
           <div class="stat-box"><span class="num">100%</span><span class="label">Family Owned</span></div>
           <div class="stat-box"><span class="num">5&#9733;</span><span class="label">Avg. Customer Rating</span></div>
-          <div class="stat-box"><span class="num">Dom + For</span><span class="label">All Makes &amp; Models</span></div>
+          <div class="stat-box"><span class="num">Quality</span><span class="label">Work Done Right</span></div>
         </div>
       </div>
       <div class="about-pillars">
@@ -592,11 +593,10 @@
             </iframe>
           =====================================================
         -->
-        <div class="steercrm-placeholder">
-          <strong>Online Scheduling Coming Soon</strong>
-          <p>In the meantime, call us at (505) 255-8870 or use the contact form below.</p>
-        </div>
-
+        <!--
+          Once SteerCRM is configured, paste the iframe embed here
+          and remove the form below.
+        -->
         <form class="fallback-form" id="appointmentForm" action="#" method="post" aria-label="Appointment request form">
           <div class="form-row">
             <div class="form-group">
@@ -720,7 +720,7 @@
         <iframe
           class="map-embed"
           title="Gene's Service Center location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.3!2d-106.5794!3d35.0903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872264b0d21f5e8b%3A0x0!2sGene's+Service+Center%2C+1401+Carlisle+Blvd+NE%2C+Albuquerque%2C+NM+87110!5e0!3m2!1sen!2sus!4v1234567890"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.8449278937636!2d-106.58001682358093!3d35.09030017271489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872264a4ab9cba5d%3A0x1e7e5d3a3f3f3f3f!2s1401+Carlisle+Blvd+NE%2C+Albuquerque%2C+NM+87110!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
@@ -759,7 +759,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Gene's Service Center &nbsp;&middot;&nbsp; All rights reserved &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a></p>
+    <p>&copy; 2026 Gene's Service Center &nbsp;&middot;&nbsp; All rights reserved &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a></p>
     <p>Auto repair serving Albuquerque, NM &nbsp;&middot;&nbsp; <a href="https://maps.google.com/?q=1401+Carlisle+Blvd+NE+Albuquerque+NM" target="_blank" rel="noopener">1401 Carlisle Blvd NE, Albuquerque NM 87110</a></p>
   </div>
 </footer>
@@ -787,9 +787,10 @@
       const select = document.getElementById('service');
       const scheduleSection = document.getElementById('schedule');
 
-      // Match option text, accounting for HTML entities
+      // Match option text — use data-service-plain if available to avoid entity mismatch
+      const plainValue = this.dataset.servicePlain || serviceValue;
       Array.from(select.options).forEach(opt => {
-        if (opt.text.trim() === serviceValue || opt.value === serviceValue) {
+        if (opt.text.trim() === plainValue || opt.text.trim() === serviceValue || opt.value === serviceValue) {
           select.value = opt.value;
         }
       });
