@@ -9,8 +9,9 @@
 <meta property="og:title" content="Gene's Service Center | Albuquerque Auto Repair Since 1959">
 <meta property="og:description" content="Family-owned auto repair in Albuquerque, NM. Honest service, fair prices, no unnecessary repairs. Brakes, transmission, steering and suspension, oil changes.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="./img/hero-bg.jpg">
-<link rel="canonical" href="https://www.genesservicecenter.com/">
+<meta property="og:image" content="https://beastly585.github.io/GenesServiceCenter/img/hero-bg.jpg">
+<meta property="og:url" content="https://beastly585.github.io/GenesServiceCenter/">
+<link rel="canonical" href="https://beastly585.github.io/GenesServiceCenter/">
 
 <script type="application/ld+json">
 {
@@ -66,30 +67,52 @@
   }
 
   /* NAV */
-  nav { background: var(--charcoal); position: sticky; top: 0; z-index: 100; }
-  .stripe-top { height: 5px; background: linear-gradient(to right, var(--red) 50%, var(--blue) 50%); }
+  nav {
+    background: linear-gradient(180deg, #1a2a4a 0%, #162240 100%);
+    position: sticky; top: 0; z-index: 100;
+    border-bottom: 2px solid var(--red);
+  }
   .nav-inner {
     max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
-    display: flex; align-items: center; justify-content: space-between; height: 58px;
+    display: flex; align-items: center; justify-content: space-between; height: 60px;
   }
   .nav-logo {
     font-family: 'Tinos', serif;
     font-weight: 700;
     font-size: 1.4rem;
-    color: var(--red);
     letter-spacing: 0.03em;
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: -0.5px -0.5px 0 rgba(255,255,255,0.55), 0.5px -0.5px 0 rgba(255,255,255,0.55), -0.5px 0.5px 0 rgba(255,255,255,0.55), 0.5px 0.5px 0 rgba(255,255,255,0.55);
+    background: linear-gradient(135deg, var(--red) 0%, #e84040 60%, #c84040 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 0.5px rgba(255,255,255,0.6)) drop-shadow(0 0 0.5px rgba(255,255,255,0.4));
   }
-  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+  .nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
   .nav-links a {
-    font-weight: 600; font-size: 0.85rem; text-transform: uppercase;
-    letter-spacing: 0.08em; color: #bbb; text-decoration: none; transition: color 0.15s;
+    font-weight: 600; font-size: 0.82rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    padding: 0.35rem 0.75rem;
+    border-radius: 2px;
+    transition: color 0.15s, background 0.15s;
+    position: relative;
   }
-  .nav-links a:hover { color: var(--white); }
-  .nav-cta { background: var(--red); color: var(--white) !important; padding: 0.4rem 1.1rem; border-radius: 2px; }
-  .nav-cta:hover { background: var(--red-dark) !important; }
+  .nav-links a:hover {
+    color: var(--white);
+    background: rgba(255,255,255,0.06);
+  }
+  .nav-cta {
+    background: var(--red) !important;
+    color: var(--white) !important;
+    padding: 0.4rem 1.1rem !important;
+    border-radius: 2px;
+  }
+  .nav-cta:hover {
+    background: var(--red-dark) !important;
+    color: var(--white) !important;
+  }
 
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
   .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); }
@@ -394,11 +417,57 @@
     .trust-bar-inner { justify-content: flex-start; }
     section { padding: 3.5rem 1.5rem; }
   }
+
+  /* ── ANIMATIONS ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
+  }
+
+  /* Hero entrance */
+  @keyframes heroIn {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-copy { animation: heroIn 0.65s ease both; }
+  .hero-info { animation: heroIn 0.65s ease 0.18s both; }
+
+  /* Stripe accent slide in */
+  @keyframes stripeIn {
+    from { transform: scaleX(0); transform-origin: left; }
+    to   { transform: scaleX(1); transform-origin: left; }
+  }
+  .stripe-top .b-red,
+  .hero-band .b-red,
+  .stripe-divider .s-red { animation: stripeIn 0.5s ease both; }
+  .stripe-top .b-blue,
+  .hero-band .b-blue,
+  .stripe-divider .s-blue { animation: stripeIn 0.5s ease 0.08s both; }
+
+  /* Scroll reveal */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-up.d1 { transition-delay: 0.1s; }
+  .fade-up.d2 { transition-delay: 0.2s; }
+  .fade-up.d3 { transition-delay: 0.3s; }
+
+  /* Stat number pop */
+  @keyframes statPop {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  .stat-box.visible .num {
+    animation: statPop 0.4s ease both;
+  }
+  .stat-box:nth-child(2).visible .num { animation-delay: 0.07s; }
+  .stat-box:nth-child(3).visible .num { animation-delay: 0.14s; }
+  .stat-box:nth-child(4).visible .num { animation-delay: 0.21s; }
 </style>
 </head>
 <body>
-
-<div class="stripe-top" aria-hidden="true"></div>
 
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
@@ -458,7 +527,7 @@
   <div class="trust-bar-inner">
     <span class="trust-item">No Pressure, No Upsells</span>
     <span class="trust-item">Domestic &amp; Foreign Vehicles</span>
-    <span class="trust-item">Computer Diagnostics</span>
+    <!-- <span class="trust-item">Computer Diagnostics</span> -->
     <!-- <span class="trust-item">You Authorize Every Repair</span> -->
     <span class="trust-item">65+ Years in Business</span>
   </div>
@@ -466,12 +535,12 @@
 
 <section id="services" aria-labelledby="services-heading">
   <div class="section-inner">
-    <p class="section-eyebrow">What We Do</p>
-    <h2 id="services-heading">Our Services</h2>
-    <p class="section-lead">We have the training and equipment to work on whatever make or model you bring in. Once we've evaluated your vehicle, we only perform the repairs and maintenance you authorize.</p>
+    <p class="section-eyebrow fade-up">What We Do</p>
+    <h2 id="services-heading" class="fade-up d1">Our Services</h2>
+    <p class="section-lead fade-up d2">We have the training and equipment to work on whatever make or model you bring in. Once we've evaluated your vehicle, we only perform the repairs and maintenance you authorize.</p>
     <div class="services-grid" role="list">
 
-      <a class="service-card" role="listitem" href="#schedule" data-service="Brake Repair">
+      <a class="service-card fade-up" role="listitem" href="#schedule" data-service="Brake Repair">
         <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
         <h3>Brake Repair</h3>
         <p>From pad replacements to full rotor resurfacing, we keep your stopping power where it needs to be. Calipers, lines, and hardware inspected with every job.</p>
@@ -485,28 +554,28 @@
         <span class="service-card-cta">Request this service &rarr;</span>
       </a>
 
-      <a class="service-card" role="listitem" href="#schedule" data-service="Transmission Repair">
+      <a class="service-card fade-up d2" role="listitem" href="#schedule" data-service="Transmission Repair">
         <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
         <h3>Transmission Repair</h3>
         <p>Automatic or manual, we rebuild and repair transmissions for domestic and foreign vehicles. Slipping gears, delayed engagement, rough shifting &mdash; we find the root cause first.</p>
         <span class="service-card-cta">Request this service &rarr;</span>
       </a>
 
-      <a class="service-card" role="listitem" href="#schedule" data-service="Oil Change">
+      <a class="service-card fade-up" role="listitem" href="#schedule" data-service="Oil Change">
         <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
         <h3>Oil Changes</h3>
         <p>Quick, thorough oil and filter changes using the grade specified for your vehicle. We check fluid levels and flag anything that needs attention while we're in there.</p>
         <span class="service-card-cta">Request this service &rarr;</span>
       </a>
 
-      <a class="service-card" role="listitem" href="#schedule" data-service="Routine Maintenance">
+      <a class="service-card fade-up d1" role="listitem" href="#schedule" data-service="Routine Maintenance">
         <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
         <h3>Routine Maintenance</h3>
         <p>Belts, hoses, coolant, filters &mdash; we follow your manufacturer's schedule so small issues don't become expensive ones. A well-maintained car costs less to own.</p>
         <span class="service-card-cta">Request this service &rarr;</span>
       </a>
 
-      <a class="service-card" role="listitem" href="#schedule" data-service="Transmission Leak Inspection">
+      <a class="service-card fade-up d2" role="listitem" href="#schedule" data-service="Transmission Leak Inspection">
         <div class="service-card-accent" aria-hidden="true"><div class="a-red"></div><div class="a-blue"></div></div>
         <h3>Transmission Leak Inspection</h3>
         <p>Red fluid on your driveway means it's time to act. We locate the source &mdash; seals, gaskets, pan, cooler lines &mdash; and give you a straight answer on what the fix involves.</p>
@@ -524,32 +593,32 @@
 
 <section id="about" aria-labelledby="about-heading">
   <div class="section-inner">
-    <p class="section-eyebrow">Our Story</p>
-    <h2 id="about-heading">Serving Albuquerque Since 1959</h2>
-    <p class="section-lead">Gene's Service Center is a family-owned and operated shop serving drivers throughout Albuquerque. Since 1959, we've been repairing and servicing domestic and foreign vehicles the right way the first time. We use computer diagnostics to determine the precise problem, and once we've evaluated your vehicle, we only perform the repairs and maintenance you authorize. We take the time to explain the mechanics of every repair so you understand exactly what was done and why. You are our priority.</p>
+    <p class="section-eyebrow fade-up">Our Story</p>
+    <h2 id="about-heading" class="fade-up d1">Serving Albuquerque Since 1959</h2>
+    <p class="section-lead fade-up d2">Gene's Service Center is a family-owned and operated shop serving drivers throughout Albuquerque. Since 1959, we've been repairing and servicing domestic and foreign vehicles the right way the first time. We use computer diagnostics to determine the precise problem, and once we've evaluated your vehicle, we only perform the repairs and maintenance you authorize. We take the time to explain the mechanics of every repair so you understand exactly what was done and why. You are our priority.</p>
     <div class="about-grid">
       <div>
         <div class="about-stats">
-          <div class="stat-box"><span class="num">65+</span><span class="label">Years Serving ABQ</span></div>
-          <div class="stat-box"><span class="num">100%</span><span class="label">Family Owned</span></div>
-          <div class="stat-box"><span class="num">5&#9733;</span><span class="label">Avg. Customer Rating</span></div>
-          <div class="stat-box"><span class="num">Quality</span><span class="label">Work Done Right</span></div>
+          <div class="stat-box fade-up"><span class="num">65+</span><span class="label">Years Serving ABQ</span></div>
+          <div class="stat-box fade-up d1"><span class="num">100%</span><span class="label">Family Owned</span></div>
+          <div class="stat-box fade-up d2"><span class="num">5&#9733;</span><span class="label">Avg. Customer Rating</span></div>
+          <div class="stat-box fade-up d3"><span class="num">Quality</span><span class="label">Work Done Right</span></div>
         </div>
       </div>
       <div class="about-pillars">
-        <div class="pillar">
+        <div class="pillar fade-up">
           <h4>You Authorize Every Repair</h4>
           <p>We run computer diagnostics, explain what we find in plain language, and only do the work you approve. No pressure, no invented line items.</p>
         </div>
-        <div class="pillar">
+        <div class="pillar fade-up d1">
           <h4>Any Make or Model</h4>
           <p>Domestic or foreign &mdash; Ford, Toyota, Honda, Chevrolet, Nissan, Subaru, Mazda, and more. Today's cars are complex; we have the training and equipment to handle them.</p>
         </div>
-        <div class="pillar">
+        <div class="pillar fade-up d2">
           <h4>We Explain What We Did</h4>
           <p>After every service, we walk you through what was found and what was done. We want you to feel confident in our work and understand your vehicle.</p>
         </div>
-        <div class="pillar">
+        <div class="pillar fade-up d3">
           <h4>Fast Turnaround</h4>
           <p>Most repairs are completed same day. Our location on Carlisle makes it easy to step out to nearby businesses while you wait.</p>
         </div>
@@ -565,12 +634,12 @@
 
 <section id="schedule" aria-labelledby="schedule-heading">
   <div class="section-inner">
-    <p class="section-eyebrow">Get In Touch</p>
-    <h2 id="schedule-heading">Schedule Your Service</h2>
+    <p class="section-eyebrow fade-up">Get In Touch</p>
+    <h2 id="schedule-heading" class="fade-up d1">Schedule Your Service</h2>
     <p class="section-lead">Request an appointment online or call us directly. We'll confirm your time and get you taken care of.</p>
     <div class="schedule-grid">
 
-      <div class="schedule-widget-box">
+      <div class="schedule-widget-box fade-up d1">
         <h3>Request an Appointment</h3>
         <p>Use the scheduling tool below or fill out the form and we'll reach out to confirm.</p>
 
@@ -643,7 +712,7 @@
         </form>
       </div>
 
-      <div class="schedule-alt">
+      <div class="schedule-alt fade-up d2">
         <div>
           <h3>Prefer to Call?</h3>
           <p>Available Monday through Thursday. Give us a call and we'll get you on the schedule right away.</p>
@@ -674,9 +743,9 @@
 
 <section id="reviews" aria-labelledby="reviews-heading">
   <div class="section-inner">
-    <p class="section-eyebrow">What Customers Say</p>
-    <h2 id="reviews-heading">Trusted for Decades</h2>
-    <div class="reviews-carousel">
+    <p class="section-eyebrow fade-up">What Customers Say</p>
+    <h2 id="reviews-heading" class="fade-up d1">Trusted for Decades</h2>
+    <div class="reviews-carousel fade-up d2">
       <div class="reviews-grid" id="reviewsGrid" role="list"></div>
       <div class="reviews-controls" aria-label="Review navigation">
         <button class="reviews-btn" id="reviewsPrev" aria-label="Previous reviews">&#8592;</button>
@@ -694,10 +763,10 @@
 
 <section id="location" aria-labelledby="location-heading">
   <div class="section-inner">
-    <p class="section-eyebrow">Find Us</p>
-    <h2 id="location-heading">We're on Carlisle Blvd</h2>
+    <p class="section-eyebrow fade-up">Find Us</p>
+    <h2 id="location-heading" class="fade-up d1">We're on Carlisle Blvd</h2>
     <div class="location-grid">
-      <div class="location-details">
+      <div class="location-details fade-up d1">
         <div class="location-row">
           <p class="lbl">Address</p>
           <p class="val">1401 Carlisle Blvd NE<br>Albuquerque, NM 87110</p>
@@ -858,6 +927,23 @@
   grid.addEventListener('mouseleave', () => { autoTimer = setInterval(() => goToPage((currentPage + 1) % totalPages), 7000); });
 
   renderPage(0);
+
+
+  // Scroll animations
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up, .stat-box').forEach(el => obs.observe(el));
+  } else {
+    document.querySelectorAll('.fade-up, .stat-box').forEach(el => el.classList.add('visible'));
+  }
+
 </script>
 
 </body>
